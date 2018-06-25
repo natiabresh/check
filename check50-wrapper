@@ -38,5 +38,4 @@ payload="{ \
     \"tag_name\": \"$tag_name\" \
 }"
 
-# send notification
-echo "$payload" | curl --header "Content-Type: application/json" --data @- --trace-ascii /dev/stdout https://cs50.me/hooks/ecs
+echo "$payload"

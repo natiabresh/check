@@ -2,6 +2,10 @@ FROM cs50/baseimage:deprecated
 
 USER root
 
+# install dev version of check50
+RUN git clone -b check50api-pool https://github.com/cs50/check50.git /tmp/check50 && \
+    pip install -U /tmp/check50
+
 # install Python packages
 RUN pip3 install \
         flask_sqlalchemy \
